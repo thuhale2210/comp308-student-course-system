@@ -3,8 +3,7 @@ import NavBar from "./components/NavBar";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import StudentDashboard from "./pages/StudentDashboard";
-import CoursePage from "./pages/CoursePage";
-import StudentPage from "./pages/StudentPage";
+import CourseEnrolmentPage from "./pages/CourseEnrolmentPage";
 import AdminDashboard from "./pages/AdminDashboard";
 import PrivateRoute from "./components/PrivateRoute";
 import AddCoursePage from "./pages/AddCoursePage";
@@ -20,11 +19,9 @@ function App() {
                 <Route path="/" element={<HomePage />} />
                 <Route path="/login" element={<LoginPage />} />
                 
-                {/* Protected Routes */}
                 <Route element={<PrivateRoute />}>
                     <Route path="/dashboard" element={<StudentDashboard />} />
-                    <Route path="/courses" element={<CoursePage />} />
-                    <Route path="/students" element={<StudentPage />} />
+                    <Route path="/courses" element={<CourseEnrolmentPage />} />
                     <Route path="/admin" element={<AdminDashboard />} />
                     <Route path="/add-course" element={<AddCoursePage />} />
                     <Route path="/add-student" element={<AddStudentPage />} />

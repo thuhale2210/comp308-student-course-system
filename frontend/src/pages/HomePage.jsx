@@ -34,7 +34,6 @@ const styles = {
     container: {
         textAlign: "center",
         fontFamily: "Arial, sans-serif",
-        color: "#333",
         backgroundColor: "#f8f9fa",
         minHeight: "100vh",
         width: "100vw",
@@ -69,8 +68,8 @@ const styles = {
     },
     button: {
         textDecoration: "none",
-        backgroundColor: "#464647",
-        color: "#fff",
+        backgroundColor: "#D1DB41",
+        color: "#464647",
         padding: "12px 24px",
         borderRadius: "6px",
         fontSize: "1.1rem",
@@ -86,7 +85,7 @@ const styles = {
         borderRadius: "6px",
         fontSize: "1.1rem",
         fontWeight: "bold",
-        border: "2px solid #464647",
+        border: "1px solid #464647",
         transition: "0.3s",
     },
     features: {

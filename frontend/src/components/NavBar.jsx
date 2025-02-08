@@ -11,14 +11,14 @@ const NavBar = () => {
 
     return (
         <nav style={styles.navbar}>
-            <h2 style={styles.logo}>Student Course System</h2>
+            <img src="src/assets/Centennial.jpeg" alt="logo" style={styles.logo}/>
+            <h2 style={styles.appname}>Student Course System</h2>
             <ul style={styles.navLinks}>
                 <li><Link to="/" style={styles.link}>Home</Link></li>
                 {token ? (
                     <>
-                        <li><Link to="/dashboard" style={styles.link}>Dashboard</Link></li>
+                        <li><Link to="/dashboard" style={styles.link}> Student Dashboard</Link></li>
                         <li><Link to="/courses" style={styles.link}>Course Enrolment</Link></li>
-                        {/* <li><Link to="/students" style={styles.link}>Students</Link></li> */}
                         <li><Link to="/admin" style={styles.link}>Admin</Link></li>
                         <li>
                             <button onClick={handleLogout} style={styles.logoutButton}>
@@ -55,6 +55,11 @@ const styles = {
         boxSizing: "border-box",
     },
     logo: {
+        width: "200px",
+        height: "60px",
+        objectFit: "cover",
+    },
+    appname: {
         margin: 0,
         fontSize: "1.5rem",
         fontWeight: "bold",
@@ -88,7 +93,7 @@ const styles = {
         whiteSpace: "nowrap",
     },
     signInButton: {
-        backgroundColor: "#007bff",
+        backgroundColor: "#D1DB41",
         color: "white",
         textDecoration: "none",
         padding: "10px 15px",

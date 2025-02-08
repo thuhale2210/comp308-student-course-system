@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const AddStudentPage = () => {
     const [studentData, setStudentData] = useState({
@@ -16,16 +17,16 @@ const AddStudentPage = () => {
         strongestSkill: "N/A"
     });
 
+    const navigate = useNavigate();
+
     const handleInputChange = (e) => {
         setStudentData({ ...studentData, [e.target.name]: e.target.value });
     };
 
     const handleSubmit = async (e) => {
-        e.preventDefault(); // Prevents page reload
+        e.preventDefault();
 
         try {
-            console.log("Submitting student data:", studentData); // Debugging Log
-
             const token = localStorage.getItem("token");
             if (!token) {
                 console.error("No authentication token found.");
@@ -41,6 +42,8 @@ const AddStudentPage = () => {
 
             console.log("Student added successfully:", response.data);
             alert("Student added successfully!");
+            
+            navigate("/admin");
         } catch (error) {
             console.error("Error adding student:", error.response?.data || error.message);
             alert("Error adding student. Check console for details.");

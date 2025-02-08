@@ -63,7 +63,7 @@ const styles = {
     form: {
         display: "flex",
         flexDirection: "column",
-        gap: "10px",
+        gap: "20px",
         backgroundColor: "#fff",
         padding: "20px",
         borderRadius: "8px",
@@ -82,8 +82,9 @@ const styles = {
         border: "1px solid #ccc",
     },
     button: {
-        backgroundColor: "#007bff",
-        color: "#fff",
+        backgroundColor: "#D1DB41",
+        color: "#464647",
+        fontWeight: "bold",
         padding: "10px",
         borderRadius: "6px",
         border: "none",

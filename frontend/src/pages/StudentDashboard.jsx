@@ -5,6 +5,7 @@ import axios from "axios";
 
 const StudentDashboard = () => {
     const navigate = useNavigate();
+    // eslint-disable-next-line no-unused-vars
     const [user, setUser] = useState(null);
     const [courses, setCourses] = useState([]);
 
@@ -50,7 +51,7 @@ const StudentDashboard = () => {
     return (
         <div style={styles.container}>
             <div style={styles.headerContainer}>
-                <h2 style={styles.title}>Welcome, {user?.firstName}</h2>
+                <h2 style={styles.title}>Student Dashboard</h2>
                 <h3 style={styles.subtitle}>Your Courses</h3>
             </div>
 
@@ -65,7 +66,7 @@ const StudentDashboard = () => {
                                 onClick={() => dropCourse(course._id)}
                                 style={styles.buttonDanger}
                             >
-                                Drop Course
+                                Drop
                             </button>
                         </div>
                         {course.courseName} - {course.semester} (Section: {course.section})
@@ -97,6 +98,7 @@ const styles = {
         fontWeight: "bold",
         color: "#222",
         textAlign: "left",
+        marginTop: "60px",
         marginBottom: "10px",
     },
     subtitle: {
@@ -117,7 +119,7 @@ const styles = {
         padding: "15px",
         margin: "10px auto",
         borderRadius: "8px",
-        boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
+        border: "1px solid #ddd",
         width: "100%",
         display: "flex",
         flexDirection: "row",
@@ -132,8 +134,8 @@ const styles = {
     },
     button: {
         textDecoration: "none",
-        backgroundColor: "#007bff",
-        color: "#fff",
+        backgroundColor: "#D1DB41",
+        color: "#464647",
         padding: "8px 12px",
         borderRadius: "6px",
         fontSize: "1rem",
@@ -144,13 +146,12 @@ const styles = {
     },
     buttonDanger: {
         textDecoration: "none",
-        backgroundColor: "#dc3545",
-        color: "#fff",
+        color: "#464647",
         padding: "8px 12px",
         borderRadius: "6px",
+        border: "1px solid #dc3545",
         fontSize: "1rem",
         transition: "0.3s",
-        border: "none",
         cursor: "pointer",
         fontWeight: "bold",
     }
